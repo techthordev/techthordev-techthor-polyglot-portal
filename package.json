@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "deploy": "ng build --base-href '/techthordev-techthor-polyglot-portal/' && npx angular-cli-ghpages --dir=dist/techthor-polyglot-portal",
+    "deploy": "ng build --base-href '/techthor-polyglot-portal/' && npx angular-cli-ghpages --dir=dist/techthor-polyglot-portal/browser",
     "test": "ng test"
   },
   "prettier": {
