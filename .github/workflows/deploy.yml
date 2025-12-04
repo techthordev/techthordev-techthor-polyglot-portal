@@ -24,10 +24,6 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --base-href "/techthor-polyglot-portal/"
 
-      - name: Copy index.html to 404.html for SPA routing
-        run: |
-          cp dist/techthor-polyglot-portal/browser/index.html dist/techthor-polyglot-portal/browser/404.html
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
