@@ -8,50 +8,9 @@
       - flex-grow: Tells this element to take up all available vertical space between the banner and the footer.
       - w-full: Ensures it spans the full width.
     -->
-    <main class="p-8 max-w-3xl mx-auto grow w-full">
-        <h1 class="text-4xl font-bold text-blue-500 mb-6">Welcome to TechThorDev ⚡</h1>
-
-        <p class="text-lg text-gray-700 mb-4">
-            This platform is the central space where I document my growth in software development. It brings
-            together all learning paths, study notes, practical projects, and tools I work with across
-            backend, frontend, databases, Linux, and modern programming languages.
-        </p>
-
-        <p class="text-lg text-gray-700 mb-8">
-            My focus is on learning through real projects, clean architecture, and consistent practice —
-            building skills step by step and applying concepts through hands-on work.
-        </p>
-
-        <div class="flex items-center justify-center">
-            <div class="flex space-x-6 text-2xl">
-                <!-- Social Links -->
-                <a
-                  href="https://instagram.com/techthordev"
-                  target="_blank"
-                  class="text-pink-500 hover:text-pink-600 transition duration-300"
-                >
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a
-                  href="https://github.com/techthordev"
-                  target="_blank"
-                  class="text-gray-800 hover:text-black transition duration-300"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-                <a
-                  href="https://linkedin.com/in/thorstenfey"
-                  target="_blank"
-                  class="text-blue-700 hover:text-blue-800 transition duration-300"
-                >
-                  <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-    </main>
+    <app-content class="grow"/>
 
     <!-- 3. Footer (Stays at the bottom, pushed there by the main element's flex-grow) -->
-    <footer class="mt-12 border-t py-6 text-center text-sm text-gray-500 w-full">
-        © 2025 TechThorDev
-    </footer>
+    <app-footer />
+    
 </div>
