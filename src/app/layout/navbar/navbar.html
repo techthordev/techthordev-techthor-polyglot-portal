@@ -25,7 +25,7 @@
             [routerLink]="link.path"
             [target]="link.isExternal ? '_blank' : '_self'"
             routerLinkActive="bg-blue-100 text-blue-800 font-bold"
-            [routerLinkActiveOptions]="{ exact: link.path === '/' ? true : false }"
+            [routerLinkActiveOptions]="{ exact: true }"
             class="text-gray-600 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-lg text-lg font-medium transition duration-150"
             aria-current="page"
           >
@@ -71,7 +71,7 @@
             (click)="toggleMenu()"
             [target]="link.isExternal ? '_blank' : '_self'"
             routerLinkActive="bg-blue-100 text-blue-800 font-bold"
-            [routerLinkActiveOptions]="{ exact: link.path === '/' ? true : false }"
+            [routerLinkActiveOptions]="{ exact: true }"
             class="text-gray-700 hover:bg-blue-100 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition duration-150"
           >
             {{ link.title }}
