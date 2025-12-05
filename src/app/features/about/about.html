@@ -1,78 +1,100 @@
-<main class="flex-1 p-8 pt-20 max-w-5xl mx-auto">
-  <!--
-CRITICAL FIX: The surrounding <div> and <main> tags were not properly closed in the previous response's markdown block.
-This version ensures the entire structure is complete and valid.
-The 'md:flex' class activates the two-column layout on medium screens and above.
--->
-  <div class="md:flex md:space-x-8">
-    <!-- Image Section (Left) - Takes 1/3 width on medium screens -->
+<main class="flex-1 p-4 md:p-8 pt-20 max-w-6xl mx-auto">
+  
+  <div class="bg-white shadow-2xl rounded-2xl p-6 sm:p-10 lg:p-12 border border-gray-100">
 
-    <div class="md:w-1/3 shrink-0 mb-6 md:mb-0">
-      <img
-        src="./assets/me.jpg"
-        alt="Portrait of Thorsten Fey"
-        class="w-full h-auto rounded-xl shadow-2xl object-cover"
-        onerror="
-          this.onerror = null;
-          this.src =
-            'https://www.google.com/search?q=https://placehold.co/400x400/007bff/ffffff%3Ftext%3DThorsten%2BFey';
-        "
-      />
+    <div class="flex flex-col md:flex-row md:space-x-12 items-start">
+      
+      <div class="shrink-0 mb-8 md:mb-0 md:w-1/3 lg:w-1/4">
+        <img
+          src="./assets/me.jpg"
+          alt="Portrait of Thorsten Fey"
+          class="w-full h-auto rounded-3xl shadow-xl object-cover ring-4 ring-blue-100/50 transition-transform duration-300 hover:scale-[1.02]"
+          onerror="
+            this.onerror = null;
+            this.src =
+              'https://placehold.co/400x400/007bff/ffffff?text=Thorsten%2BFey';
+          "
+        />
+      </div>
+      
+      <div class="md:w-2/3 lg:w-3/4">
+        <p class="text-3xl font-light text-gray-800 mb-6">Hi, I’m Thorsten Fey.</p>
+        
+        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+          I am an IT professional with strong experience in technical support, troubleshooting, and working with complex systems in international environments.
+        </p>
+        
+        <p class="text-base text-gray-700 leading-relaxed border-l-4 border-blue-500 pl-4 italic bg-blue-50/50 p-2 rounded-r-md">
+          For many years, I worked across Linux and Windows ecosystems. My journey is now actively transitioning into software development.
+        </p>
+      </div>
     </div>
 
-    <!-- Content Section (Right) - Takes 2/3 width on medium screens -->
+    <hr class="my-10 border-gray-200" />
 
-    <div class="md:w-2/3">
-      <h1 class="text-5xl font-extrabold text-blue-500 mb-6">About Me</h1>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-      <!-- Start of the new, comprehensive text block -->
+      <div class="p-6 bg-blue-50 rounded-xl shadow-lg border border-blue-100">
+        <p class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+          <i class="fas fa-code mr-3"></i> 🚀 My Dev Focus
+        </p>
+        
+        <p class="text-gray-700 mb-4 text-base">
+          My structured, hands-on, self-taught journey centers on backend and full-stack expertise.
+        </p>
 
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Hi, I’m Thorsten Fey — an IT professional with strong experience in technical support,
-        troubleshooting, and working with complex systems in international environments.
-      </p>
+        <div class="flex flex-wrap gap-2 pt-2 border-t border-blue-200 mt-4">
+          <span class="px-3 py-1 text-sm font-medium text-red-800 bg-red-100 rounded-full">
+            <i class="fab fa-java mr-1"></i> Java/Spring Boot
+          </span>
+          <span class="px-3 py-1 text-sm font-medium text-orange-800 bg-orange-100 rounded-full">
+            <i class="fas fa-wrench mr-1"></i> Rust
+          </span>
+          <span class="px-3 py-1 text-sm font-medium text-blue-800 bg-blue-100 rounded-full">
+            <i class="fas fa-database mr-1"></i> PostgreSQL
+          </span>
+          <span class="px-3 py-1 text-sm font-medium text-pink-800 bg-pink-100 rounded-full">
+            <i class="fab fa-angular mr-1"></i> Angular/TypeScript
+          </span>
+          <span class="px-3 py-1 text-sm font-medium text-gray-800 bg-gray-200 rounded-full">
+            <i class="fab fa-linux mr-1"></i> Linux/Fedora
+          </span>
+          <span class="px-3 py-1 text-sm font-medium text-cyan-800 bg-cyan-100 rounded-full">
+            <i class="fab fa-docker mr-1"></i> Docker
+          </span>
+        </div>
+      </div>
 
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        For many years, I’ve worked across Linux and Windows ecosystems, helping users, solving
-        complex issues, and keeping systems running smoothly.
-        <i class="fas fa-desktop text-blue-500 ml-1"></i>
-      </p>
+      <div class="p-6 bg-green-50 rounded-xl shadow-lg border border-green-100">
+        <p class="text-2xl font-semibold text-green-700 mb-4 flex items-center">
+          🚀 Mentality & Mission
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4 text-base">
+          I follow clean code principles, build practical projects, and document my progress to help others start or grow in tech. Everything is broken down clearly for beginners and career-changers.
+        </p>
+        <p class="text-xl font-medium text-green-800 mt-4 italic border-t border-green-200 pt-3">
+          "Step by step, steady progress — that’s the mission."
+        </p>
+      </div>
 
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Alongside my IT career, I’m actively transitioning into software development through a
-        structured, hands-on, self-taught journey. My current learning focus includes Java/Spring
-        Boot, Angular/TypeScript, Rust, PostgreSQL, and Linux/Fedora.
-        <i class="fas fa-code text-green-600 ml-1"></i>
-      </p>
-
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        I follow clean code principles, build practical projects, and share my progress through
-        TechThorDev. But this platform isn’t only about documenting my path — it’s here to help
-        others who want to start, restart, or grow in tech.
-        <i class="fas fa-rocket text-red-500 ml-1"></i>
-      </p>
-
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Everything I learn, I break down clearly so that beginners and career-changers can benefit
-        from it too.
-      </p>
-
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        I bring a structured mindset, analytical thinking, and the motivation to improve every day.
-        My international experience helps me collaborate in diverse teams and adapt quickly to new
-        tools and technologies. <i class="fas fa-globe-americas text-yellow-600 ml-1"></i>
-      </p>
-
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Right now, I’m strengthening my portfolio and moving toward development-focused roles, where
-        I can combine my IT support background with a growing foundation in backend development and
-        system understanding.
-      </p>
-
-      <p class="text-xl font-semibold text-blue-700 mt-6">
-        Step by step, steady progress — that’s the mission.
-        <i class="fas fa-bolt text-yellow-300 ml-1"></i>
-      </p>
+      <div class="p-6 bg-yellow-50 rounded-xl shadow-lg border border-yellow-100">
+        <p class="text-2xl font-semibold text-yellow-700 mb-4 flex items-center">
+          🌍 Professional Strengths
+        </p>
+        
+        <div class="space-y-3 text-gray-700 text-base pt-2 border-t border-yellow-200">
+            <p class="leading-relaxed flex items-start">
+                <span>Analytical Thinking: Bringing a structured mindset and motivation to improve every day.</span>
+            </p>
+            <p class="leading-relaxed flex items-start">
+                <span>International Collaboration: My experience helps me collaborate in diverse teams and adapt quickly to new tools and technologies.</span>
+            </p>
+            <p class="leading-relaxed flex items-start">
+                <span>Future Goal: Combining my strong IT support background with a growing foundation in backend development for development-focused roles.</span>
+            </p>
+        </div>
+      </div>
     </div>
+    
   </div>
 </main>
