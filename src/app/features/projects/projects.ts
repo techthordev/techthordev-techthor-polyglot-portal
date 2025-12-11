@@ -18,6 +18,6 @@ export interface ProjectItem {
   description: string;
   iconPath: string;
   repoUrl?: string;
-  category: 'Portal Showcase' | 'Proof of Work';
+  category: 'Portal Documentation' | 'Proof of Work';
   repoLabel?: string;
 }

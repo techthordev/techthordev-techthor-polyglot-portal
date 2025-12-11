@@ -3,7 +3,7 @@ import { ProjectItem } from '../features/projects/projects';
 export const PROJECT_DATA: ProjectItem[] = [
   {
     name: 'Polyglot Portal',
-    category: 'Portal Showcase',
+    category: 'Portal Documentation',
     description:
       'High‑gloss reference site built with Angular 21+ and TailwindCSS v4+. It presents stacks, tracks, and ideas in a professional, unified way. Still evolving, but already a showcase of modern web design and implementation.',
     iconPath: 'assets/icons/angular-logo.png',
