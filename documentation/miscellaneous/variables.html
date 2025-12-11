@@ -1,0 +1,613 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>techthor-polyglot-portal documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+          <script>
+              // --- Iframe navigation tracking for Template Playground ---
+              function sendCurrentUrlToParent() {
+                  if (window.parent && window.parent !== window) {
+                      window.parent.postMessage({
+                          type: 'compodoc-iframe-navigate',
+                          url: window.location.pathname + window.location.hash
+                      }, '*');
+                  }
+              }
+              window.addEventListener('hashchange', sendCurrentUrlToParent, false);
+              window.addEventListener('popstate', sendCurrentUrlToParent, false);
+              window.addEventListener('DOMContentLoaded', sendCurrentUrlToParent, false);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">techthor-polyglot-portal documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Miscellaneous</li>
+  <li class="breadcrumb-item">Variables</li>
+</ol>
+
+<section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#appConfig" title="src/app/app.config.ts" ><b>appConfig</b>&nbsp;&nbsp;&nbsp;(src/.../app.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getGroupedMasteryTracks" title="src/app/data/mastery-track.data.ts" ><b>getGroupedMasteryTracks</b>&nbsp;&nbsp;&nbsp;(src/.../mastery-track.data.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getGroupedProjects" title="src/app/data/projects.data.ts" ><b>getGroupedProjects</b>&nbsp;&nbsp;&nbsp;(src/.../projects.data.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getGroupedStack" title="src/app/data/tech-stack.data.ts" ><b>getGroupedStack</b>&nbsp;&nbsp;&nbsp;(src/.../tech-stack.data.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MASTERY_TRACK_DATA" title="src/app/data/mastery-track.data.ts" ><b>MASTERY_TRACK_DATA</b>&nbsp;&nbsp;&nbsp;(src/.../mastery-track.data.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#PROJECT_DATA" title="src/app/data/projects.data.ts" ><b>PROJECT_DATA</b>&nbsp;&nbsp;&nbsp;(src/.../projects.data.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#routes" title="src/app/app.routes.ts" ><b>routes</b>&nbsp;&nbsp;&nbsp;(src/.../app.routes.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#TECH_STACK_DATA" title="src/app/data/tech-stack.data.ts" ><b>TECH_STACK_DATA</b>&nbsp;&nbsp;&nbsp;(src/.../tech-stack.data.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/app/app.config.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="appConfig"></a>
+                    <span class="name">
+                        <span ><b>appConfig</b></span>
+                        <a href="#appConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/App.html" target="_self" >ApplicationConfig</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  providers: [
+    provideRouter(routes),           // Provide router with routes (history API by default)
+    provideClientHydration()
+  ]
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/data/mastery-track.data.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getGroupedMasteryTracks"></a>
+                    <span class="name">
+                        <span ><b>getGroupedMasteryTracks</b></span>
+                        <a href="#getGroupedMasteryTracks"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(data: MasteryTrackItem[]) &#x3D;&gt; {
+  return data.reduce(
+    (acc, item) &#x3D;&gt; {
+      (acc[item.category] &#x3D; acc[item.category] || []).push(item);
+      return acc;
+    },
+    {} as Record&lt;MasteryTrackItem[&#x27;category&#x27;], MasteryTrackItem[]&gt;,
+  );
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="MASTERY_TRACK_DATA"></a>
+                    <span class="name">
+                        <span ><b>MASTERY_TRACK_DATA</b></span>
+                        <a href="#MASTERY_TRACK_DATA"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/MasteryTrackItem.html" target="_self" >MasteryTrackItem[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+  {
+    name: &#x27;Java DSA &amp; Concurrency&#x27;,
+    category: &#x27;Algorithms &amp; Concurrency&#x27;,
+    description:
+      &#x27;Structured problem-solving practice covering algorithms, data structures, time/space optimization, threading, synchronization, and lock-based concurrency patterns.&#x27;,
+    iconPath: &#x27;assets/icons/java-logo.png&#x27;,
+    repoUrl: &#x27;https://github.com/techthordev/leetcode/tree/main/java&#x27;,
+  },
+
+  {
+    name: &#x27;PostgreSQL Mastery Track&#x27;,
+    category: &#x27;Database Mastery&#x27;,
+    description:
+      &#x27;Advanced SQL practice including joins, window functions, indexing strategies, query optimization, normalization principles, and schema design.&#x27;,
+    iconPath: &#x27;assets/icons/postgresql-logo.png&#x27;,
+    repoUrl: &#x27;https://github.com/techthordev/leetcode/tree/main/postgresql&#x27;,
+  },
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/data/projects.data.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getGroupedProjects"></a>
+                    <span class="name">
+                        <span ><b>getGroupedProjects</b></span>
+                        <a href="#getGroupedProjects"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(data: ProjectItem[]) &#x3D;&gt; {
+  return data.reduce(
+    (acc, item) &#x3D;&gt; {
+      (acc[item.category] &#x3D; acc[item.category] || []).push(item);
+      return acc;
+    },
+    {} as Record&lt;ProjectItem[&#x27;category&#x27;], ProjectItem[]&gt;,
+  );
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="PROJECT_DATA"></a>
+                    <span class="name">
+                        <span ><b>PROJECT_DATA</b></span>
+                        <a href="#PROJECT_DATA"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ProjectItem.html" target="_self" >ProjectItem[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+  {
+    name: &#x27;Polyglot Portal&#x27;,
+    category: &#x27;Portal Showcase&#x27;,
+    description:
+      &#x27;High‑gloss reference site built with Angular 21+ and TailwindCSS v4+. It presents stacks, tracks, and ideas in a professional, unified way. Still evolving, but already a showcase of modern web design and implementation.&#x27;,
+    iconPath: &#x27;assets/icons/angular-logo.png&#x27;,
+    repoUrl: &#x27;https://techthordev.com.br&#x27;,
+  },
+  {
+    name: &#x27;LeetCode Database Extension&#x27;,
+    category: &#x27;Proof of Work&#x27;,
+    description:
+      &#x27;Dedicated GitHub repository and GitHub Page (techthordev.github.io/leetcode). Spring Boot backend (Docker/Podman on OCI VM) reads SQL solution files from GitHub, generates API endpoints, executes queries against PostgreSQL, and returns results as JSON. Frontend built with Angular 21+ and TailwindCSS v4+.&#x27;,
+    iconPath: &#x27;assets/icons/postgresql-logo.png&#x27;,
+    repoUrl: &#x27;https://leetcode.techthordev.com.br&#x27;,
+  },
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/data/tech-stack.data.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getGroupedStack"></a>
+                    <span class="name">
+                        <span ><b>getGroupedStack</b></span>
+                        <a href="#getGroupedStack"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(data: TechStackItem[]) &#x3D;&gt; {
+  return data.reduce((acc, item) &#x3D;&gt; {
+    (acc[item.category] &#x3D; acc[item.category] || []).push(item);
+    return acc;
+  }, {} as Record&lt;TechStackItem[&#x27;category&#x27;], TechStackItem[]&gt;);
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="TECH_STACK_DATA"></a>
+                    <span class="name">
+                        <span ><b>TECH_STACK_DATA</b></span>
+                        <a href="#TECH_STACK_DATA"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/TechStackItem.html" target="_self" >TechStackItem[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+  // Backend &amp;&amp; Framworks
+  {
+    name: &#x27;Java&#x27;,
+    category: &#x27;Backend Language&#x27;,
+    description: &#x27;The foundation for robust, cross-platform enterprise applications.&#x27;,
+    iconPath: &#x27;assets/icons/java-logo.png&#x27;,
+  },
+  {
+    name: &#x27;Spring&#x27;,
+    category: &#x27;Framework&#x27;,
+    description: &#x27;Microservice-ready, convention-over-configuration framework for Java.&#x27;,
+    iconPath: &#x27;assets/icons/spring-logo.png&#x27;,
+  },
+  { 
+      name: &#x27;Python&#x27;, 
+      category: &#x27;Backend Language&#x27;, 
+      description: &#x27;Versatile language used for scripting, data science, and web APIs.&#x27;, 
+      iconPath: &#x27;assets/icons/python-logo.png&#x27;
+    },
+    { 
+      name: &#x27;FastAPI&#x27;, 
+      category: &#x27;Framework&#x27;, 
+      description: &#x27;Modern, fast (High performance) web framework for building Python APIs.&#x27;, 
+      iconPath: &#x27;assets/icons/fastapi-logo.png&#x27;
+    },
+    { 
+      name: &#x27;Rust&#x27;, 
+      category: &#x27;Backend Language&#x27;, 
+      description: &#x27;System programming focused on safety and high performance.&#x27;, 
+      iconPath: &#x27;assets/icons/rust-logo.png&#x27;
+    },
+    
+    // 🌐 Frontend Frameworks
+    { 
+      name: &#x27;Angular (21+)&#x27;, 
+      category: &#x27;Frontend Framework&#x27;, 
+      description: &#x27;Modern, scalable web applications using TypeScript and Standalone Components.&#x27;, 
+      iconPath: &#x27;assets/icons/angular-logo.png&#x27;
+    },
+    { 
+      name: &#x27;TypeScript&#x27;, 
+      category: &#x27;Frontend Framework&#x27;, 
+      description: &#x27;Superset of JavaScript that adds static typing for increased reliability.&#x27;, 
+      iconPath: &#x27;assets/icons/typescript-logo.png&#x27;
+    },
+    
+    // 💾 Database
+    { 
+      name: &#x27;PostgreSQL&#x27;, 
+      category: &#x27;Database&#x27;, 
+      description: &#x27;Robust, open-source relational database, preferred for reliability and extensibility.&#x27;, 
+      iconPath: &#x27;assets/icons/postgresql-logo.png&#x27;
+    },
+    
+    // ⚙️ DevOps
+    { 
+      name: &#x27;Docker&#x27;, 
+      category: &#x27;DevOps&#x27;, 
+      description: &#x27;Containerization for consistent environments and simplified deployment.&#x27;, 
+      iconPath: &#x27;assets/icons/docker-logo.png&#x27;
+    },
+  
+    // 🖥️ Development Tools &amp; OS
+    { 
+      name: &#x27;Fedora&#x27;, 
+      category: &#x27;Development Tools&#x27;, 
+      description: &#x27;Primary Linux OS for development, security, and stability.&#x27;, 
+      iconPath: &#x27;assets/icons/fedora-logo.png&#x27;
+    },
+    { 
+      name: &#x27;IntelliJ &amp; Zed&#x27;, 
+      category: &#x27;Development Tools&#x27;, 
+      description: &#x27;Preferred IDEs for Java/Backend (IntelliJ) and fast, modern Frontend/Rust development (Zed).&#x27;, 
+      iconPath: &#x27;assets/icons/ide-logo.png&#x27;
+    },
+    { 
+      name: &#x27;Git&#x27;, 
+      category: &#x27;Development Tools&#x27;, 
+      description: &#x27;Version control system, enforcing the standard &#x60;main&#x60; branch.&#x27;, 
+      iconPath: &#x27;assets/icons/git-logo.png&#x27;
+    },
+  ]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/app.routes.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="routes"></a>
+                    <span class="name">
+                        <span ><b>routes</b></span>
+                        <a href="#routes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Routes</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+
+  { path: &#x27;&#x27;, component: Content, title: &#x27;TechThorDev - Home&#x27; },
+  
+  // Feature Routes: Mapped to the simplified component names
+    { path: &#x27;stack&#x27;, component: TechStack, title: &#x27;Tech Stack - Polyglot&#x27; },
+    { path: &#x27;tracks&#x27;, component: MasteryTracks, title: &#x27;Mastery Tracks - Curated Paths&#x27; },
+    { path: &#x27;projects&#x27;, component: Projects, title: &#x27;Projects&#x27; },
+    { path: &#x27;about&#x27;, component: About, title: &#x27;About Thorsten&#x27; },
+    
+    { path: &#x27;**&#x27;, redirectTo: &#x27;&#x27;, pathMatch: &#x27;full&#x27; },
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
