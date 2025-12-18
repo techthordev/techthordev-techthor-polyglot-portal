@@ -5,11 +5,11 @@
   "targets": {
     "techthordev": {
       "hosting": {
-        "docs-app": [
-          "docs-techthordev-app"
-        ],
         "techthordev-app": [
           "techthordev-app"
+        ],
+        "docs-techthordev-app": [
+          "docs-techthordev-app"
         ]
       }
     }

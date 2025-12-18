@@ -260,7 +260,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/layout/navbar/navbar.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/layout/navbar/navbar.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -297,8 +297,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="23"
-                                    class="link-to-prism">src/app/layout/navbar/navbar.ts:23</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="24"
+                                    class="link-to-prism">src/app/layout/navbar/navbar.ts:24</a></div>
                         </td>
                     </tr>
 
@@ -334,8 +334,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="25"
-                                    class="link-to-prism">src/app/layout/navbar/navbar.ts:25</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="26"
+                                    class="link-to-prism">src/app/layout/navbar/navbar.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -381,7 +381,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/layout/navbar/navbar.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/layout/navbar/navbar.ts:20</a></div>
                         </td>
                     </tr>
 
@@ -409,10 +409,11 @@
                     <td class="col-md-4">
                         <i>Default value : </i><code>[
     { title: &#x27;Home&#x27;, path: &#x27;/&#x27;, isExternal: false },
-    { title: &#x27;Polyglot Stack&#x27;, path: &#x27;/stack&#x27;, isExternal: false }, // Focus on the breadth of technologies
-    { title: &#x27;Mastery Tracks&#x27;, path: &#x27;/tracks&#x27;, isExternal: false }, // Focus on the curated course knowledge
+    { title: &#x27;Polyglot Stack&#x27;, path: &#x27;/stack&#x27;, isExternal: false },
+    { title: &#x27;Mastery Tracks&#x27;, path: &#x27;/tracks&#x27;, isExternal: false },
     { title: &#x27;Projects&#x27;, path: &#x27;/projects&#x27;, isExternal: false },
     { title: &#x27;About&#x27;, path: &#x27;/about&#x27;, isExternal: false },
+    { title: &#x27;Docs&#x27;, path: &#x27;https://docs.techthordev.com.br&#x27;, isExternal: true }
   ]</code>
                     </td>
                 </tr>
@@ -443,10 +444,11 @@ import { RouterLink, RouterLinkActive } from &#x27;@angular/router&#x27;;
 export class Navbar implements OnInit {
   navLinks &#x3D; [
     { title: &#x27;Home&#x27;, path: &#x27;/&#x27;, isExternal: false },
-    { title: &#x27;Polyglot Stack&#x27;, path: &#x27;/stack&#x27;, isExternal: false }, // Focus on the breadth of technologies
-    { title: &#x27;Mastery Tracks&#x27;, path: &#x27;/tracks&#x27;, isExternal: false }, // Focus on the curated course knowledge
+    { title: &#x27;Polyglot Stack&#x27;, path: &#x27;/stack&#x27;, isExternal: false },
+    { title: &#x27;Mastery Tracks&#x27;, path: &#x27;/tracks&#x27;, isExternal: false },
     { title: &#x27;Projects&#x27;, path: &#x27;/projects&#x27;, isExternal: false },
     { title: &#x27;About&#x27;, path: &#x27;/about&#x27;, isExternal: false },
+    { title: &#x27;Docs&#x27;, path: &#x27;https://docs.techthordev.com.br&#x27;, isExternal: true }
   ];
 
   isMenuOpen &#x3D; false;
@@ -465,19 +467,25 @@ export class Navbar implements OnInit {
     <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;nav class&#x3D;&quot;bg-white shadow-lg sticky top-0 z-50&quot;&gt;
   &lt;div class&#x3D;&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
-    &lt;div class&#x3D;&quot;flex justify-between items-center h-20&quot;&gt; &lt;!-- Increased height for logo --&gt;
-      
+    &lt;div class&#x3D;&quot;flex justify-between items-center h-20&quot;&gt;
+      &lt;!-- Increased height for logo --&gt;
+
       &lt;!-- Logo / Branding --&gt;
       &lt;div class&#x3D;&quot;flex items-center space-x-3 shrink-0&quot;&gt;
         &lt;a [routerLink]&#x3D;&quot;[&#x27;/&#x27;]&quot; class&#x3D;&quot;flex items-center space-x-3&quot;&gt;
           &lt;!-- Logo Image (Assumed in assets/thors-hammer-logo.jpg) --&gt;
-          &lt;img 
-            src&#x3D;&quot;./assets/thors-hammer-logo.jpg&quot; 
-            alt&#x3D;&quot;TechThorDev Logo - Thor&#x27;s Hammer&quot; 
+          &lt;img
+            src&#x3D;&quot;./assets/thors-hammer-logo.jpg&quot;
+            alt&#x3D;&quot;TechThorDev Logo - Thor&#x27;s Hammer&quot;
             class&#x3D;&quot;h-10 w-auto rounded-full shadow-md&quot;
-            onerror&#x3D;&quot;this.onerror&#x3D;null; this.src&#x3D;&#x27;https://placehold.co/40x40/007bff/ffffff?text&#x3D;TD&#x27;&quot;
+            onerror&#x3D;&quot;
+              this.onerror &#x3D; null;
+              this.src &#x3D; &#x27;https://placehold.co/40x40/007bff/ffffff?text&#x3D;TD&#x27;;
+            &quot;
+          /&gt;
+          &lt;span
+            class&#x3D;&quot;text-3xl font-extrabold text-blue-500 hover:text-blue-800 transition duration-300 hidden sm:block&quot;
           &gt;
-          &lt;span class&#x3D;&quot;text-3xl font-extrabold text-blue-500 hover:text-blue-800 transition duration-300 hidden sm:block&quot;&gt;
             TechThorDev
           &lt;/span&gt;
         &lt;/a&gt;
@@ -485,41 +493,73 @@ export class Navbar implements OnInit {
 
       &lt;!-- Desktop Links --&gt;
       &lt;div class&#x3D;&quot;hidden sm:ml-6 sm:flex sm:space-x-6&quot;&gt;
-        @for (link of navLinks; track link.path) {
-          &lt;a
-            [routerLink]&#x3D;&quot;link.path&quot;
-            [target]&#x3D;&quot;link.isExternal ? &#x27;_blank&#x27; : &#x27;_self&#x27;&quot;
-            routerLinkActive&#x3D;&quot;bg-blue-100 text-blue-800 font-bold&quot;
-            [routerLinkActiveOptions]&#x3D;&quot;{ exact: true }&quot;
-            class&#x3D;&quot;text-gray-600 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-lg text-lg font-medium transition duration-150&quot;
-            aria-current&#x3D;&quot;page&quot;
-          &gt;
-            {{ link.title }}
-          &lt;/a&gt;
-        }
+        @for (link of navLinks; track link.path) { @if (link.isExternal) {
+        &lt;a
+          [href]&#x3D;&quot;link.path&quot;
+          target&#x3D;&quot;_blank&quot;
+          rel&#x3D;&quot;noopener noreferrer&quot;
+          class&#x3D;&quot;text-gray-700 hover:bg-blue-100 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition duration-150&quot;
+        &gt;
+          {{ link.title }}
+        &lt;/a&gt;
+        } @else {
+        &lt;a
+          [routerLink]&#x3D;&quot;link.path&quot;
+          (click)&#x3D;&quot;toggleMenu()&quot;
+          routerLinkActive&#x3D;&quot;bg-blue-100 text-blue-800 font-bold&quot;
+          [routerLinkActiveOptions]&#x3D;&quot;{ exact: true }&quot;
+          class&#x3D;&quot;text-gray-700 hover:bg-blue-100 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition duration-150&quot;
+        &gt;
+          {{ link.title }}
+        &lt;/a&gt;
+        } }
       &lt;/div&gt;
 
       &lt;!-- Mobile Menu Button --&gt;
       &lt;div class&#x3D;&quot;sm:hidden flex items-center&quot;&gt;
-        &lt;button 
-          (click)&#x3D;&quot;toggleMenu()&quot; 
+        &lt;button
+          (click)&#x3D;&quot;toggleMenu()&quot;
           routerLinkActive&#x3D;&quot;bg-blue-100 text-blue-800 font-bold&quot;
-          type&#x3D;&quot;button&quot; 
+          type&#x3D;&quot;button&quot;
           class&#x3D;&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition duration-150&quot;
           aria-expanded&#x3D;&quot;false&quot;
         &gt;
           &lt;span class&#x3D;&quot;sr-only&quot;&gt;Open main menu&lt;/span&gt;
           &lt;!-- Hamburger Menu Icon --&gt;
           @if (!isMenuOpen) {
-            &lt;svg class&#x3D;&quot;block h-6 w-6&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; fill&#x3D;&quot;none&quot; viewBox&#x3D;&quot;0 0 24 24&quot; stroke&#x3D;&quot;currentColor&quot; aria-hidden&#x3D;&quot;true&quot;&gt;
-              &lt;path stroke-linecap&#x3D;&quot;round&quot; stroke-linejoin&#x3D;&quot;round&quot; stroke-width&#x3D;&quot;2&quot; d&#x3D;&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
-            &lt;/svg&gt;
+          &lt;svg
+            class&#x3D;&quot;block h-6 w-6&quot;
+            xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;
+            fill&#x3D;&quot;none&quot;
+            viewBox&#x3D;&quot;0 0 24 24&quot;
+            stroke&#x3D;&quot;currentColor&quot;
+            aria-hidden&#x3D;&quot;true&quot;
+          &gt;
+            &lt;path
+              stroke-linecap&#x3D;&quot;round&quot;
+              stroke-linejoin&#x3D;&quot;round&quot;
+              stroke-width&#x3D;&quot;2&quot;
+              d&#x3D;&quot;M4 6h16M4 12h16M4 18h16&quot;
+            /&gt;
+          &lt;/svg&gt;
           }
           &lt;!-- X Close Icon --&gt;
           @if (isMenuOpen) {
-            &lt;svg class&#x3D;&quot;block h-6 w-6&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; fill&#x3D;&quot;none&quot; viewBox&#x3D;&quot;0 0 24 24&quot; stroke&#x3D;&quot;currentColor&quot; aria-hidden&#x3D;&quot;true&quot;&gt;
-              &lt;path stroke-linecap&#x3D;&quot;round&quot; stroke-linejoin&#x3D;&quot;round&quot; stroke-width&#x3D;&quot;2&quot; d&#x3D;&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
-            &lt;/svg&gt;
+          &lt;svg
+            class&#x3D;&quot;block h-6 w-6&quot;
+            xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;
+            fill&#x3D;&quot;none&quot;
+            viewBox&#x3D;&quot;0 0 24 24&quot;
+            stroke&#x3D;&quot;currentColor&quot;
+            aria-hidden&#x3D;&quot;true&quot;
+          &gt;
+            &lt;path
+              stroke-linecap&#x3D;&quot;round&quot;
+              stroke-linejoin&#x3D;&quot;round&quot;
+              stroke-width&#x3D;&quot;2&quot;
+              d&#x3D;&quot;M6 18L18 6M6 6l12 12&quot;
+            /&gt;
+          &lt;/svg&gt;
           }
         &lt;/button&gt;
       &lt;/div&gt;
@@ -528,24 +568,25 @@ export class Navbar implements OnInit {
 
   &lt;!-- Mobile Menu Content --&gt;
   @if (isMenuOpen) {
-    &lt;div class&#x3D;&quot;sm:hidden bg-gray-50 border-t&quot; id&#x3D;&quot;mobile-menu&quot;&gt;
-      &lt;div class&#x3D;&quot;px-2 pt-2 pb-3 space-y-1&quot;&gt;
-        @for (link of navLinks; track link.path) {
-          &lt;a
-            [routerLink]&#x3D;&quot;link.path&quot;
-            (click)&#x3D;&quot;toggleMenu()&quot;
-            [target]&#x3D;&quot;link.isExternal ? &#x27;_blank&#x27; : &#x27;_self&#x27;&quot;
-            routerLinkActive&#x3D;&quot;bg-blue-100 text-blue-800 font-bold&quot;
-            [routerLinkActiveOptions]&#x3D;&quot;{ exact: true }&quot;
-            class&#x3D;&quot;text-gray-700 hover:bg-blue-100 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition duration-150&quot;
-          &gt;
-            {{ link.title }}
-          &lt;/a&gt;
-        }
-      &lt;/div&gt;
+  &lt;div class&#x3D;&quot;sm:hidden bg-gray-50 border-t&quot; id&#x3D;&quot;mobile-menu&quot;&gt;
+    &lt;div class&#x3D;&quot;px-2 pt-2 pb-3 space-y-1&quot;&gt;
+      @for (link of navLinks; track link.path) {
+      &lt;a
+        [routerLink]&#x3D;&quot;link.path&quot;
+        (click)&#x3D;&quot;toggleMenu()&quot;
+        [target]&#x3D;&quot;link.isExternal ? &#x27;_blank&#x27; : &#x27;_self&#x27;&quot;
+        routerLinkActive&#x3D;&quot;bg-blue-100 text-blue-800 font-bold&quot;
+        [routerLinkActiveOptions]&#x3D;&quot;{ exact: true }&quot;
+        class&#x3D;&quot;text-gray-700 hover:bg-blue-100 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition duration-150&quot;
+      &gt;
+        {{ link.title }}
+      &lt;/a&gt;
+      }
     &lt;/div&gt;
+  &lt;/div&gt;
   }
-&lt;/nav&gt;</code></pre>
+&lt;/nav&gt;
+</code></pre>
     </div>
 
 
@@ -574,7 +615,7 @@ export class Navbar implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><nav class="bg-white shadow-lg sticky top-0 z-50">  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">    <div class="flex justify-between items-center h-20"> <!-- Increased height for logo -->            <!-- Logo / Branding -->      <div class="flex items-center space-x-3 shrink-0">        <a [routerLink]="[\'/\']" class="flex items-center space-x-3">          <!-- Logo Image (Assumed in assets/thors-hammer-logo.jpg) -->          <img             src="./assets/thors-hammer-logo.jpg"             alt="TechThorDev Logo - Thor\'s Hammer"             class="h-10 w-auto rounded-full shadow-md"            onerror="this.onerror=null; this.src=\'https://placehold.co/40x40/007bff/ffffff?text=TD\'"          >          <span class="text-3xl font-extrabold text-blue-500 hover:text-blue-800 transition duration-300 hidden sm:block">            TechThorDev          </span>        </a>      </div>      <!-- Desktop Links -->      <div class="hidden sm:ml-6 sm:flex sm:space-x-6">        @for (link of navLinks; track link.path) {          <a            [routerLink]="link.path"            [target]="link.isExternal ? \'_blank\' : \'_self\'"            routerLinkActive="bg-blue-100 text-blue-800 font-bold"            [routerLinkActiveOptions]="{ exact: true }"            class="text-gray-600 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-lg text-lg font-medium transition duration-150"            aria-current="page"          >            {{ link.title }}          </a>        }      </div>      <!-- Mobile Menu Button -->      <div class="sm:hidden flex items-center">        <button           (click)="toggleMenu()"           routerLinkActive="bg-blue-100 text-blue-800 font-bold"          type="button"           class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition duration-150"          aria-expanded="false"        >          <span class="sr-only">Open main menu</span>          <!-- Hamburger Menu Icon -->          @if (!isMenuOpen) {            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />            </svg>          }          <!-- X Close Icon -->          @if (isMenuOpen) {            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />            </svg>          }        </button>      </div>    </div>  </div>  <!-- Mobile Menu Content -->  @if (isMenuOpen) {    <div class="sm:hidden bg-gray-50 border-t" id="mobile-menu">      <div class="px-2 pt-2 pb-3 space-y-1">        @for (link of navLinks; track link.path) {          <a            [routerLink]="link.path"            (click)="toggleMenu()"            [target]="link.isExternal ? \'_blank\' : \'_self\'"            routerLinkActive="bg-blue-100 text-blue-800 font-bold"            [routerLinkActiveOptions]="{ exact: true }"            class="text-gray-700 hover:bg-blue-100 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition duration-150"          >            {{ link.title }}          </a>        }      </div>    </div>  }</nav></div>'
+        var COMPONENT_TEMPLATE = '<div><nav class="bg-white shadow-lg sticky top-0 z-50">  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">    <div class="flex justify-between items-center h-20">      <!-- Increased height for logo -->      <!-- Logo / Branding -->      <div class="flex items-center space-x-3 shrink-0">        <a [routerLink]="[\'/\']" class="flex items-center space-x-3">          <!-- Logo Image (Assumed in assets/thors-hammer-logo.jpg) -->          <img            src="./assets/thors-hammer-logo.jpg"            alt="TechThorDev Logo - Thor\'s Hammer"            class="h-10 w-auto rounded-full shadow-md"            onerror="              this.onerror = null;              this.src = \'https://placehold.co/40x40/007bff/ffffff?text=TD\';            "          />          <span            class="text-3xl font-extrabold text-blue-500 hover:text-blue-800 transition duration-300 hidden sm:block"          >            TechThorDev          </span>        </a>      </div>      <!-- Desktop Links -->      <div class="hidden sm:ml-6 sm:flex sm:space-x-6">        @for (link of navLinks; track link.path) { @if (link.isExternal) {        <a          [href]="link.path"          target="_blank"          rel="noopener noreferrer"          class="text-gray-700 hover:bg-blue-100 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition duration-150"        >          {{ link.title }}        </a>        } @else {        <a          [routerLink]="link.path"          (click)="toggleMenu()"          routerLinkActive="bg-blue-100 text-blue-800 font-bold"          [routerLinkActiveOptions]="{ exact: true }"          class="text-gray-700 hover:bg-blue-100 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition duration-150"        >          {{ link.title }}        </a>        } }      </div>      <!-- Mobile Menu Button -->      <div class="sm:hidden flex items-center">        <button          (click)="toggleMenu()"          routerLinkActive="bg-blue-100 text-blue-800 font-bold"          type="button"          class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition duration-150"          aria-expanded="false"        >          <span class="sr-only">Open main menu</span>          <!-- Hamburger Menu Icon -->          @if (!isMenuOpen) {          <svg            class="block h-6 w-6"            xmlns="http://www.w3.org/2000/svg"            fill="none"            viewBox="0 0 24 24"            stroke="currentColor"            aria-hidden="true"          >            <path              stroke-linecap="round"              stroke-linejoin="round"              stroke-width="2"              d="M4 6h16M4 12h16M4 18h16"            />          </svg>          }          <!-- X Close Icon -->          @if (isMenuOpen) {          <svg            class="block h-6 w-6"            xmlns="http://www.w3.org/2000/svg"            fill="none"            viewBox="0 0 24 24"            stroke="currentColor"            aria-hidden="true"          >            <path              stroke-linecap="round"              stroke-linejoin="round"              stroke-width="2"              d="M6 18L18 6M6 6l12 12"            />          </svg>          }        </button>      </div>    </div>  </div>  <!-- Mobile Menu Content -->  @if (isMenuOpen) {  <div class="sm:hidden bg-gray-50 border-t" id="mobile-menu">    <div class="px-2 pt-2 pb-3 space-y-1">      @for (link of navLinks; track link.path) {      <a        [routerLink]="link.path"        (click)="toggleMenu()"        [target]="link.isExternal ? \'_blank\' : \'_self\'"        routerLinkActive="bg-blue-100 text-blue-800 font-bold"        [routerLinkActiveOptions]="{ exact: true }"        class="text-gray-700 hover:bg-blue-100 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition duration-150"      >        {{ link.title }}      </a>      }    </div>  </div>  }</nav></div>'
     var COMPONENTS = [{'name': 'About', 'selector': 'app-about'},{'name': 'App', 'selector': 'app-root'},{'name': 'Banner', 'selector': 'app-banner'},{'name': 'Content', 'selector': 'app-content'},{'name': 'Footer', 'selector': 'app-footer'},{'name': 'MasteryTracks', 'selector': 'app-mastery-tracks'},{'name': 'Navbar', 'selector': 'app-navbar'},{'name': 'Projects', 'selector': 'app-projects'},{'name': 'TechStack', 'selector': 'app-tech-stack'},{'name': 'TemplatePlaygroundComponent', 'selector': 'template-playground-root'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'Navbar'};

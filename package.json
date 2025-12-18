@@ -5,12 +5,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "docs": "compodoc -p tsconfig.json -s --port 4204",
     "build:all": "ng build techthor-polyglot-portal --configuration production",
+    "build:docs": "compodoc -p tsconfig.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "docs": "compodoc -p tsconfig.json -s --port 4204",
     "deploy:main": "npm run build:all && firebase deploy --only hosting:techthordev-app",
-    "deploy:docs": "firebase deploy --only hosting:docs-app"
+    "deploy:docs": "npm run build:docs && firebase deploy --only hosting:docs-techthordev-app"
   },
   "prettier": {
     "printWidth": 100,
