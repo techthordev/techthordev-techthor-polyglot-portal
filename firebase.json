@@ -10,11 +10,6 @@
           "destination": "/index.html"
         }
       ]
-    },
-    {
-      "target": "docs-techthordev-app",
-      "public": "documentation",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
     }
   ]
 }
