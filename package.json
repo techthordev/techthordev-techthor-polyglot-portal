@@ -5,13 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "docs": "compodoc -p tsconfig.json -s --port 4204",
     "build:all": "ng build techthor-polyglot-portal --configuration production",
-    "build:docs": "compodoc -p tsconfig.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy:main": "npm run build:all && firebase deploy --only hosting:techthordev-app",
-    "deploy:docs": "npm run build:docs && firebase deploy --only hosting:docs-techthordev-app"
+    "deploy:main": "npm run build:all && firebase deploy --only hosting:techthordev-app"
   },
   "prettier": {
     "printWidth": 100,
@@ -41,7 +38,6 @@
     "@angular/build": "^21.0.0",
     "@angular/cli": "^21.0.0",
     "@angular/compiler-cli": "^21.0.0",
-    "@compodoc/compodoc": "^1.1.32",
     "@tailwindcss/postcss": "^4.1.12",
     "jsdom": "^27.1.0",
     "postcss": "^8.5.3",
