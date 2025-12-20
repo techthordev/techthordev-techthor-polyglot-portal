@@ -1,6 +1,6 @@
 {
   "name": "Portal API Docs",
-  "baseUrl": "/api/portal/",
+  "baseUrl": "/",
   "disablePrivate": true,
   "disableProtected": true,
   "disableInternal": true,
