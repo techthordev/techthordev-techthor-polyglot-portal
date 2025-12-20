@@ -1,0 +1,10 @@
+{
+  "name": "Portal API Docs",
+  "baseUrl": "/api/portal/",
+  "disablePrivate": true,
+  "disableProtected": true,
+  "disableInternal": true,
+  "disableSourceCodeUrl": true,
+  "disableLicensePage": true,
+  "theme": "material"
+}

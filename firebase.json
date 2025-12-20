@@ -10,6 +10,11 @@
           "destination": "/index.html"
         }
       ]
+    },
+    {
+      "target": "compodoc-portal-api",
+      "public": "compodoc-portal-build",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
     }
   ]
 }
