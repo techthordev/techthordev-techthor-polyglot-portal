@@ -13,7 +13,7 @@ export const MASTERY_TRACK_DATA: MasteryTrackItem[] = [
     description:
       'Structured problem-solving practice covering algorithms, data structures, time/space optimization, threading, synchronization, and lock-based concurrency patterns.',
     iconPath: 'assets/icons/java-logo.png',
-    repoUrl: 'https://github.com/techthordev/leetcode/tree/main/java',
+    repoUrl: 'https://github.com/techthordev/leetcode/tree/main/JavaProblems',
   },
 
   {
